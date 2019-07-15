@@ -3,12 +3,11 @@ FROM php:7.2-fpm
 WORKDIR /var/www
 
 # Install dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends --allow-unauthenticated \
   autoconf \
   pkg-config \
   libssl-dev \
   build-essential \
-  mysql-client \
   libmcrypt-dev \
   libpng-dev \
   libjpeg62-turbo-dev \
