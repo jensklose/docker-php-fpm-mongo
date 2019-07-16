@@ -6,4 +6,4 @@
 | ------------------------- | --------- |
 | php                       | 7.0-7.3   |
 | MongoDB extension version | 1.5.5     |
-| ssmtp                     | installed |
+| msmtp                     | installed |

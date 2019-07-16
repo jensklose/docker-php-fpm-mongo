@@ -8,21 +8,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends --allow-unauthe
   pkg-config \
   libssl-dev \
   build-essential \
-  libmcrypt-dev \
   libpng-dev \
   libjpeg62-turbo-dev \
   libfreetype6-dev \
   locales \
-  zip \
   jpegoptim optipng pngquant gifsicle \
-  vim \
   unzip \
   git \
   msmtp msmtp-mta \
   curl
 
 # Install extensions
-RUN docker-php-ext-install bcmath mbstring zip mcrypt
 RUN docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/
 RUN docker-php-ext-install gd
 RUN pecl install mongodb
